@@ -1,0 +1,5 @@
+(test
+ (name test_inotify_eio)
+ (build_if %{lib-available:eio_main})
+ (libraries ounit2 inotify-eio eio_main fileutils)
+ (modules test_inotify_eio))

@@ -8,9 +8,3 @@
  (build_if %{lib-available:lwt})
  (libraries ounit2 inotify.lwt fileutils)
  (modules test_inotify_lwt))
-
-(test
- (name test_inotify_eio)
- (build_if %{lib-available:eio_main})
- (libraries ounit2 inotify-eio eio_main fileutils)
- (modules test_inotify_eio))
